@@ -11,7 +11,10 @@ $(window).resize(function(){
 // main_html=('<span><i class="fa fa-play"></i></span>');
 // $main_menuitem.prepend(main_html);
 
-
+$('.navbar-toggle').on('click',function(){
+  console.log('toggling css');
+  $('#menu-primary-menu *').css('display','block');
+});
 //===============Top bar removal when scrolling==================
 
 

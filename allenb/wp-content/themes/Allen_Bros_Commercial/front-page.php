@@ -13,8 +13,7 @@
   );
   $loop = new WP_Query( $args );
 ?>
-    <div class="navbar navbar-default navbar-fixed-top" id="top-navbar">
-        <div class="container" style="margin-top:68px;" >
+
           <?php $defaults = array(
               'container' => false,
               'theme_location' => 'landing-menu',
@@ -22,17 +21,20 @@
             );
 
            ?>
-          <div class="row">
-            <a class="navbar-brand" href="/" id="ABPhotoContainer">
-              <?php if($loop -> have_posts()) :  while($loop -> have_posts()) : $loop -> the_post() ?>
-              <img alt="Brand" src=<?php the_field('main_logo') ?> onerror="ab commercial logo for web 070302.gif" id="ABPhoto" class="img-responsive">
-            </a>
-            <div class="col-sm-8">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+           <div class="row front-page-nav">
+             <div class="col-sm-4">
+                <a class="navbar-brand" href="/" id="ABPhotoContainer">
+                  <?php if($loop -> have_posts()) :  while($loop -> have_posts()) : $loop -> the_post() ?>
+                  <img alt="Brand" src=<?php the_field('main_logo') ?> onerror="ab commercial logo for web 070302.gif" id="ABPhoto" class="img-responsive">
+                </a>
+              </div>
+              <div class="col-sm-8">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
             </div>
           <!-- <div class = "collapse navbar-collapse">
            <ul class="nav navbar-nav navbar-right">
@@ -41,9 +43,8 @@
               <li><a href='AB-legal_notices.php'>Legal Notices</a></li>
             </ul>
           </div> -->
-        </div>
-      </div>
-    </div>
+
+
     <div id="coolCarousel" class="carousel slide" data-ride="carousel">
       <?php  wp_nav_menu( $defaults ); ?>
       <ol class="carousel-indicators">
