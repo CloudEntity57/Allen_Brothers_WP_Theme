@@ -3,7 +3,7 @@
 Theme Name: Allen-Brothers-Commercial
 Author: Josh Foster
 Author URI: http://teamtreehouse.com/
-Description: A custom Wordpress template made for David Bryan of Allen Brothers Commercial
+Description: A custom Wordpress template made for Allen Brothers Commercial Realtors
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -146,11 +146,6 @@ header {
   margin-right: 0em;
 }
 
-.navbar-brand img {
-  position: absolute;
-  bottom: 20px;
-}
-
 .fa-play {
   font-size: .55em !important;
   margin-right: 1em;
@@ -180,7 +175,7 @@ header {
 .allen_menu {
   font-size: 1.5em;
   position: absolute;
-  top: 20vh;
+  top: 25vh;
   left: 10vw;
   z-index: 100;
   width: 20em;
@@ -319,6 +314,12 @@ header {
 
 .company-info {
   font-size: .75em;
+}
+
+@media (max-width: 760px) {
+  .company-info {
+    display: none !important;
+  }
 }
 
 #feature-contain {
@@ -541,14 +542,16 @@ header {
   position: absolute;
   width: 100vw;
   margin-left: 0px;
-  top: 182px;
+  top: 150px;
   background-color: #b1b8bf;
   padding: 0px 25px;
 }
 
 @media (max-width: 760px) {
   #menu-primary-menu {
-    top: 155px;
+    top: 55px;
+    right: 150px;
+    width: 20vw;
     height: 0px;
   }
   #menu-primary-menu * {
@@ -641,6 +644,12 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 760px) {
+  .houston-header {
+    height: 296px;
+  }
 }
 
 #houstonList li {
@@ -1269,10 +1278,18 @@ footer {
   text-align: center;
 }
 
+.front-page-nav {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  z-index: 2;
+}
+
 #coolCarousel {
-  margin-top: 68px;
+  margin-top: 0px;
   min-height: 200px;
   max-height: 550px;
+  margin-bottom: 2em;
   overflow: hidden;
 }
 

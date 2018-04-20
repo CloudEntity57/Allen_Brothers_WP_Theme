@@ -9,15 +9,24 @@
         <?php wp_head(); ?>
     </head>
     <header>
-        <div id="title-row2">
-            <div id = "top-row"><div><a href="index.htm"><img src = <?php echo get_template_directory_uri() . "/images/ab_svg_logo.svg"  ?> id="top-picture"></a></div>
-            <div class="company-info"><b>Allen Brothers Commercial</b>
-            Houston, TX<br>
-            800-377-2292
+      <div id="title-row2">
+        <div id = "top-row">
+          <div>
+            <a href="index.htm">
+              <img src = <?php echo get_template_directory_uri() . "/images/ab_svg_logo.svg"  ?> id="top-picture">
+            </a>
+          </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".company-info">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <div class="company-info"><b>Allen Brothers Commercial</b>
+          Houston, TX<br>
+          800-377-2292
+          </div>
         </div>
-        </div>
-
-            </div>
+      </div>
     </header>
     <body <?php body_class(); ?>>
       <!-- <div class="nav-slide clearfix"> -->
